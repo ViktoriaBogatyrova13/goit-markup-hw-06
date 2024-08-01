@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="hidden" class="page-header"> 
+    <header  class="page-header"> 
         <div class="container header-container">
         <nav class="header-nav">
         <a class="logo header-logo" href="./index.html">Web<span class="logo-part">Studio</span></a>
@@ -91,14 +91,14 @@
 </div>
     </header>
     <main>
-        <section class="hidden" class="hero">
+        <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
                    <button type="button" class="hero-btn">Order Service</button>      
                 </div>
                 </section>
     
-        <section class="hidden" class="solution">
+        <section class="solution">
             <div class="container">
              <h2 class="visually-hidden">solution for business</h2>
             <ul class="solution-list">
@@ -138,7 +138,7 @@
             </ul>
         </div>
         </section>
-        <section class="hidden" class="team">
+        <section class="team">
             <div class="container">
             <h2 class="team-title">Our Team</h2>  
             <ul class="team-list">
@@ -301,13 +301,19 @@
         </div>
         </section>
     
-        <section class="hidden" class="portfolio">
+        <section class="portfolio">
             <div class="container">
             <h2 class="portfolio-title">Our Portfolio</h2>
             <ul class="page-portfolio">
                 <li class="portfolio-item">
                     <div class="portfolio-item-wrap">
-                    <img src="./images/img5.jpg" alt="bank app" width="360" height="300">
+                        <picture>
+                        <source srcset="./images/bankapp-mobile.jpg 1x, ./images/bankapp-mobile-2x.jpg 2x" media="(max-width:767px)">
+                    <source srcset="./images/bankapp-tablet.jpg 1x, ./images/bankapp-tablet-2x.jpg 2x" media="(min-width:768px)">
+                    <source srcset="./images/bankapp-desktop.jpg 1x, ./images/bankapp-desktop-2x.jpg 2x" media="(min-width:1158px)">
+                    <img src="./images/bankapp-mobile.jpg" alt="bank app" width="360" height="300">
+                </picture>
+                  
                    <p class="portfolio-item-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>
                    <div class="portfolio-overview">
@@ -317,7 +323,13 @@
                 </li>
                 <li class="portfolio-item">
                     <div class="portfolio-item-wrap">
-                    <img src="./images/img6.jpg" alt="cashless payment" width="360" height="300">
+                        <picture>
+                            <source srcset="./images/cash-mobile.jpg 1x, ./images/cash-mobile-2x 2x" media="(max-width:767px)">
+                            <source srcset="./images/cash-tablet.jpg 1x, ./images/cash-tablet-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/cash-desctop.jpg 1x, ./images/cash-desctop-2x 2x" media="(min-width:1158px)">
+                    <img src="./images/cash-mobile.jpg" alt="cashless payment" width="360" height="300">
+                        </picture>
+                   
                     <p class="portfolio-item-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>  
                     <div class="portfolio-overview">
@@ -327,7 +339,13 @@
                 </li>
                 <li class="portfolio-item">
                     <div class="portfolio-item-wrap">
-                    <img src="./images/img7.jpg" alt="meditation app" width="360" height="300">
+                        <picture>
+                            <source srcset="./images/meditation-mobile.jpg 1x, ./images/meditation-mobile-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/meditation-tablet.jpg 1x, ./images/meditation-tablet-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/meditation-desctop.jpg 1x, ./images/meditation-desctop-2x 2x" media="(min-width:1158px)">
+                        <img src="./images/meditation-mobile.jpg" alt="meditation app" width="360" height="300">
+                        </picture>
+                
                     <p class="portfolio-item-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>   
                     <div class="portfolio-overview">
@@ -337,7 +355,13 @@
                 </li>
                 <li class="portfolio-item">
                     <div class="portfolio-item-wrap">
-                    <img src="./images/img8.jpg" alt="car" width="360" height="300">
+                        <picture>
+                            <source srcset="./images/taxi-mobile.jpg 1x, ./images/taxi-mobile-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/taxi-tablet.jpg 1x, ./images/taxi-tablet-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/taxi-desctop.jpg 1x, ./images/taxi-desctop-2x 2x" media="(min-width:1158px)">
+                        <img src="./images/taxi-mobile.jpg" alt="car" width="360" height="300">
+                        </picture>
+                   
                     <p class="portfolio-item-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>   
                        <div class="portfolio-overview"> 
@@ -347,7 +371,13 @@
                 </li>
                 <li class="portfolio-item">
                     <div class="portfolio-item-wrap">
-                    <img src="./images/img9.jpg" alt="phone" width="360" height="300">
+                        <picture>
+                            <source srcset="./images/screen-mobile.jpg 1x, ./images/screen-mobile-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/screen-tablet.jpg 1x, ./images/screen-tablet-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/screen-desctop.jpg 1x, ./images/screen-desctop-2x 2x" media="(min-width:1158px)">
+                    <img src="./images/screen-mobile.jpg" alt="phone" width="360" height="300">
+                        </picture>
+                  
                     <p class="portfolio-item-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>                   
                    <div class="portfolio-overview"> 
@@ -357,7 +387,13 @@
                 </li>
                 <li class="portfolio-item">
                     <div class="portfolio-item-wrap">
-                    <img src="./images/img10.jpg" alt="women" width="360" height="300">
+                        <picture>
+                            <source srcset="./online-mobile.jpg 1x, ./images/online-mobile-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/online-tablet.jpg 1x, ./images/online-tablet-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/online-desctop.jpg 1x, ./images/online-desctop-2x 2x" media="(min-width:1158px)">
+                    <img src="./images/online-mobile.jpg" alt="women" width="360" height="300">
+                        </picture>
+                   
                     <p class="portfolio-item-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
                 </div>                     
                     <div class="portfolio-overview">
@@ -424,7 +460,7 @@
 </div> 
 </footer>
 
-<div class="hidden" class="backdrop is-open">
+<div class="backdrop ">
     <div class="modal">
         <button type="button" class="modal-close">
             <svg class="modal-btn-close" width="8" height="8">
