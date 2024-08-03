@@ -202,12 +202,14 @@ img {
     align-items: center;
   }
   .contacts-link {
-    padding: 24px 0;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts-list {
+    gap: 40px;
   }
 }
 
@@ -222,7 +224,8 @@ img {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  padding: 72px 52px;
+  padding: 72px 0;
+  max-width: 320px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -239,7 +242,8 @@ img {
     background-position: center;
     background-size: cover;
     margin: 0 auto;
-    padding: 72px 52px;
+    padding: 72px 0;
+    max-width: 320px;
   }
 }
 
@@ -290,6 +294,8 @@ img {
     background-position: center;
     background-size: cover;
     margin: 0 auto;
+    padding: 112px 0;
+    max-width: 768px;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -306,6 +312,8 @@ img {
       background-position: center;
       background-size: cover;
       margin: 0 auto;
+      padding: 112px 0;
+      max-width: 768px;
     }
   }
 }
@@ -426,7 +434,7 @@ img {
   gap: 40px;
 }
 
-.mobile-nav-item {
+.mobile-nav-link {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -437,7 +445,9 @@ img {
 .mobile-span {
   color: #404bbf;
 }
-
+.mobile-contacts {
+  font-style: normal;
+}
 .mobile-contacts-list {
   display: flex;
   flex-direction: column;
@@ -486,11 +496,12 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .mobile-menu: none;
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .solution {
-  display: flex;
   align-items: center;
   padding: 96px 0;
 }
@@ -503,7 +514,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
-  height: 100%;
 }
 
 .solution-subtitle {
@@ -513,6 +523,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .solution-text {
@@ -524,16 +535,21 @@ img {
 }
 @media screen and (min-width: 768px) {
   .solution-item {
-    width: calc((100% - 3 * 24px) / 2);
+    width: calc((100% - 24px) / 2);
   }
   .solution-subtitle {
     text-align: start;
   }
+  .solution-list {
+    gap: 72px 24px;
+  }
 }
 @media screen and (min-width: 1158px) {
+  .solution {
+    padding: 120px 0;
+  }
   .solution-list {
     gap: 24px;
-    padding: 120px 0;
   }
   .solution-icon-pic {
     display: flex;
@@ -574,6 +590,7 @@ img {
 }
 .team-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 72px;
 }
@@ -658,6 +675,9 @@ img {
 }
 
 @media screen and (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
   .team-item {
     width: calc((100% - 72px) / 4);
   }
@@ -680,8 +700,6 @@ img {
 .portfolio {
   padding-top: 96px;
   padding-bottom: 86px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 .page-portfolio {
   display: flex;
@@ -720,6 +738,7 @@ img {
   border-top: none;
 }
 .portfolio-item {
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -750,20 +769,29 @@ img {
   .portfolio {
     padding: 96px 0;
   }
+  .page-portfolio {
+    gap: 72px 24px;
+  }
   .portfolio-item {
     width: 100%;
-    width: calc((100% - 5 * 24px) / 2);
-    gap: 24px 72px;
+    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
   .portfolio {
     padding: 120px 0;
   }
+  .page-portfolio {
+    gap: 48px 24px;
+  }
   .portfolio-item {
     width: 100%;
-    width: calc((100% - 5 * 24px) / 3);
-    gap: 24px 48px;
+    width: calc((100% - 2 * 24px) / 3);
+    box-shadow: none;
+  }
+  .portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 }
 
@@ -810,6 +838,8 @@ img {
   justify-content: center;
   gap: 16px;
   width: 100%;
+}
+.logo-social {
   margin-bottom: 72px;
 }
 
@@ -869,7 +899,6 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 16px;
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
@@ -890,12 +919,9 @@ img {
   fill: #fff;
 }
 @media screen and (min-width: 768px) {
-  .page-footer {
-    padding-left: 108px;
-  }
   .footer-container {
-    display: inline-block;
     align-items: baseline;
+    padding-left: 108px;
   }
 
   .footer-logo-par {
@@ -913,7 +939,6 @@ img {
   }
   .logo-social {
     display: flex;
-    gap: 24px;
   }
   .footer-logo {
     margin: 0;
@@ -930,10 +955,15 @@ img {
     display: flex;
     gap: 24px;
   }
+  .footer-input-email {
+    margin: 0;
+    width: 264px;
+  }
 }
 @media screen and (min-width: 1158px) {
   .footer-container {
     display: flex;
+    padding: 0 15px;
   }
 
   .footer-logo-par {
@@ -946,7 +976,6 @@ img {
 
   .footer-icon-list {
     display: flex;
-    gap: 16px;
   }
   .footer-form {
     margin-left: auto;
@@ -958,6 +987,12 @@ img {
   }
   .footer-input-email {
     width: 264px;
+  }
+  .footer-text {
+    margin: 0;
+  }
+  .logo-social {
+    margin: 0;
   }
 }
 .backdrop {
@@ -991,7 +1026,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
 }
 .backdrop:not(.is-open) .modal {
   transform: translate(-50%, -50%) scale(1.5);
@@ -1033,7 +1068,6 @@ img {
 }
 
 .form-field {
-  margin-bottom: 8px;
 }
 .form-label {
   font-size: 12px;
@@ -1077,7 +1111,10 @@ input:focus + .form-icon {
 .form-field-textarea {
   margin-bottom: 16px;
 }
-
+.modal-span {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
 .form-input-textarea {
   width: 100%;
   height: 120px;
@@ -1099,12 +1136,13 @@ input:focus + .form-icon {
 }
 
 .modal-check-text {
+  display: flex;
+  align-items: center;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.04em;
   color: #8e8f99;
 }
-.modal-check-text span {
+.modal-check-text .modal-span {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1117,7 +1155,6 @@ input:focus + .form-icon {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
 }
-
 .modal-check:checked + .modal-check-text span {
   background-color: #404bbf;
   border: none;
@@ -1153,6 +1190,6 @@ input:focus + .form-icon {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    width: 408px;
+    padding: 72px 24px 24px 24px;
   }
 }
