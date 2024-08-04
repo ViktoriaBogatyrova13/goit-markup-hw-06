@@ -923,7 +923,9 @@ img {
     align-items: baseline;
     padding-left: 108px;
   }
-
+  .footer-text {
+    margin: 0;
+  }
   .footer-logo-par {
     display: block;
     width: 264px;
@@ -1191,5 +1193,11 @@ input:focus + .form-icon {
 @media screen and (min-width: 768px) {
   .modal {
     padding: 72px 24px 24px 24px;
+    width: 408px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .modal {
+    width: ;
   }
 }
